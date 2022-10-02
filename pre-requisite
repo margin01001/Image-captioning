@@ -1,0 +1,12 @@
+# Text Vectorization (tf.keras.layers.TextVectorization)
+# n-gram
+# attention model
+# layers.Embedding
+
+
+Tensorflow------->
+# https://www.tensorflow.org/api_docs/python/tf/data/Dataset#shuffle
+# https://www.tensorflow.org/api_docs/python/tf/data/Dataset#prefetch
+# https://www.tensorflow.org/api_docs/python/tf/data/Dataset#batch
+# https://www.tensorflow.org/api_docs/python/tf/keras/Model
+# 
