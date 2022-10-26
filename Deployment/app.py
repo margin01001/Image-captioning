@@ -21,9 +21,10 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXT
 
 # loading our feature extracter (vgg16)
-encoder = load_model(filepath='./models/vgg16_model', compile=False)
-decoder = load_model(filepath='./models/model_30_sep', compile=False)
-input_vocab = np.load('./numpy/input_vocab.npy')
+
+encoder = load_model(filepath='models/vgg16_model', compile=False)
+decoder = load_model(filepath='models/model_30_sep', compile=False)
+input_vocab = np.load('numpy/input_vocab.npy')
 
 def generate_cap(img_feat):
     curr_word = tf.constant([[3]], dtype='int64')
@@ -79,4 +80,4 @@ def upload():
         return redirect(request.url)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port="5000")
